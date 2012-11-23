@@ -1,0 +1,246 @@
+/* ------------------------------------------
+  Reset ♥
+  http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+---------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:100%;
+  font:inherit;
+  vertical-align:baseline;
+  }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display:block;
+  }
+body { line-height:1; }
+ol, ul { list-style:none;  }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: collapse; border-spacing:0; }
+/* remember to define focus styles. Hee Haw */
+:focus { outline:0; }
+
+*::-webkit-scrollbar {
+  background:#fff;
+  width:15px;
+  }
+*::-webkit-scrollbar-thumb {
+  background:#ccc;
+  border-radius:15px;
+  border:5px #fff solid;
+  }
+
+/*-----------------------------------
+  Typography
+-------------------------------------*/
+body {
+  background:#f0f0f0;
+  font:400 15px/1.6667em 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:#404040;
+  margin:0; padding:0;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  }
+
+h3, h4, h5, h6, strong {
+  font-weight:700;
+  }
+h2, h3, h4, h5, h6 {
+  margin:0 0 10px;
+  }
+
+h1 {
+  font-size:48px;
+  font-weight:300;
+  margin:0 0 10px;
+  }
+
+h2 {
+  font-size:28px;
+  line-height:34px;
+  font-weight:300;
+  margin:10px 0 20px;
+  }
+
+h3 {
+  font-size:15px;
+  line-height:1.333em;
+  }
+
+h4 {
+  font-size:12px;
+  line-height:1.666em;
+  }
+
+a {
+  color:#CE5C00;
+  text-decoration:none;
+  }
+  a:hover {
+    color:#f06b00;
+    }
+
+p {
+  margin:0 0 10px;
+  }
+em {
+  font-weight:400;
+  font-style:italic;
+  }
+li {
+  margin:0 0 10px;
+  }
+
+/*-----------------------------------
+  Page Layout
+-------------------------------------*/
+.limiter {
+  width:800px;
+  margin:0 auto;
+  }
+.section .limiter {
+  border-bottom:1px solid #e6e6e6;
+  padding:20px 60px;
+  }
+.item {
+  padding:15px 0;
+  }
+.indent {
+  margin-left:40px;
+  }
+.small {
+  font-size:13px;
+  }
+
+.col {
+  float:left;
+  display:block;
+  }
+  .col-aside {
+    width:180px;
+    }
+  .col-main {
+    width:540px;
+    }
+
+.pull-left {
+  display:block;
+  margin-left:180px;  
+  }
+
+.section.heading {
+  padding-top:60px;
+  }
+  .heading h1 {
+    float:left;
+    }
+  .heading .limiter {
+    padding-top:80px;
+    border-top:8px solid #F06B00;
+    }
+
+.deets {
+  float:right;
+  font-size:13px;
+  line-height:20px;
+  }
+
+.section.experience ul li {
+  background:transparent url(images/sprite.png) no-repeat 0 0;
+  padding:0 0 8px 25px;
+  margin:0;
+  }
+  
+/* Last item rule */
+.section.publications .limiter,
+.section.footer .limiter {
+  padding-bottom:60px;
+  }
+
+/*-----------------------------------
+  Style
+-------------------------------------*/
+.limiter {
+  background:#fff;
+  }
+.title {
+  color:#666;
+  }
+.date {
+  color:#b0b0b0;
+  }
+.status {
+  color:#b0b0b0;
+  font-style:italic;
+  }
+.twitter-follow-button {
+  display:block;
+  margin:10px 0;
+  }
+.skills li {
+  display:inline-block;
+  margin:0 10px 5px 0;
+  -webkit-border-radius:8px;
+          border-radius:8px;
+  }
+
+.footer {
+  font-size:13px;
+  text-align:center;
+  }
+  .footer .limiter {
+    background:#f0f0f0;
+    padding-top:40px;
+    }
+
+/*-----------------------------------
+  Mobile
+-------------------------------------*/
+@media only screen and (max-width:640px) {
+  
+  }
+
+/*-----------------------------------
+  Lil Helpers
+-------------------------------------*/
+.centered {
+  display:block;
+  text-align:center;
+  }
+
+/* Email Spam Trick */
+.reverse {
+  unicode-bidi:bidi-override;
+  direction:rtl;
+  }
+
+/*Markup free clearing
+Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
+.clearfix:after {
+  content:'';
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+  }
+* html .clearfix { height:1%; }
+*:first-child + html .clearfix { min-height:1%; }
