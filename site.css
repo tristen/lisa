@@ -158,10 +158,8 @@ li {
     border-top:8px solid #F06B00;
     }
 
-.deets {
+.twitter-follow-button {
   float:right;
-  font-size:13px;
-  line-height:20px;
   }
 
 .section.experience ul li {
@@ -204,7 +202,6 @@ li {
   }
 
 .footer {
-  font-size:13px;
   text-align:center;
   }
   .footer .limiter {
@@ -216,7 +213,31 @@ li {
   Mobile
 -------------------------------------*/
 @media only screen and (max-width:640px) {
-  
+    .section .limiter{
+      width:80%;
+      padding-left:10%;
+      padding-right:10%;
+      }
+    .col {
+      width:100%;
+      float:none;
+      }
+    .section.heading {
+      padding:0;
+      }
+    .heading h1 {
+      float:none;
+      display:block;
+      margin:20px 0;
+      }
+      .heading .limiter {
+        padding-top:40px;
+        }
+
+    .twitter-follow-button {
+      display:block;
+      float:none;
+      }
   }
 
 /*-----------------------------------
