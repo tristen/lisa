@@ -70,8 +70,8 @@ h2, h3, h4, h5, h6 {
 
 h1 {
   font-size:48px;
+  line-height:52px;
   font-weight:300;
-  margin:0 0 10px;
   }
 
 h2 {
@@ -195,7 +195,7 @@ li {
   margin:10px 0;
   }
 .skills li {
-  display:inline-block;
+  float:left;
   margin:0 10px 5px 0;
   -webkit-border-radius:8px;
           border-radius:8px;
