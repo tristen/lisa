@@ -265,4 +265,11 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
       float:none;
       }
   }
-
+@media
+only screen and (-webkit-min-device-pixel-ratio : 2),
+only screen and (min-device-pixel-ratio : 2) {
+    .section.experience ul li {
+      background:transparent url(images/sprite@2x.png) no-repeat 0 0;
+      background-size:20px 20px;
+    }
+  }
