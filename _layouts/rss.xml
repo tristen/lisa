@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xml:base="{{page.url}}" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+  <title>{{page.title}} | Lisa Toole</title>
+  <link>http://lisatoole.com</link>
+  <description>{{page.description}}</description>
+  <language>en</language>
+  {% for item in site.posts limit:40 %}
+    {% if item.category == 'blog' %}
+      {% include rss-item.xml %}
+    {% endif %}
+  {% endfor %}
+</channel>
+</rss>
