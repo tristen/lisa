@@ -48,6 +48,11 @@ table { border-collapse: collapse; border-spacing:0; }
   border-radius:15px;
   border:5px #fff solid;
   }
+*, *:after, *:before {
+  -webkit-box-sizing:border-box;
+     -moz-box-sizing:border-box;
+          box-sizing:border-box;
+  }
 
 /*-----------------------------------
   Typography
@@ -56,8 +61,6 @@ body {
   background:#f0f0f0;
   font:400 15px/1.6667em 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color:#404040;
-  margin:0; padding:0;
-  overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
   }
 
@@ -114,10 +117,11 @@ li {
   Page Layout
 -------------------------------------*/
 .limiter {
-  width:800px;
+  width:880px;
   margin:0 auto;
   }
-.section .limiter {
+section {
+  background:#fff;
   border-bottom:1px solid #e6e6e6;
   padding:20px 60px;
   }
@@ -137,7 +141,7 @@ li {
   display:block;
   }
   .col-aside {
-    width:180px;
+    width:140px;
     }
   .col-main {
     width:540px;
@@ -148,39 +152,30 @@ li {
   margin-left:180px;  
   }
 
-.section.heading {
-  padding-top:60px;
+header {
+  background:#fff;
+  border-top:8px solid #F06B00;
+  padding:60px 60px 20px;
+  margin-top:60px;
   }
-  .heading h1 {
-    float:left;
-    }
-  .heading .limiter {
-    padding-top:80px;
-    border-top:8px solid #F06B00;
-    }
-
 .twitter-follow-button {
   float:right;
   }
 
-.section.experience ul li {
+section.experience ul li {
   background:transparent url(images/sprite.png) no-repeat 0 0;
   padding:0 0 8px 25px;
   margin:0;
   }
   
 /* Last item rule */
-.section.publications .limiter,
-.section.footer .limiter {
+section.publications {
   padding-bottom:60px;
   }
 
 /*-----------------------------------
   Style
 -------------------------------------*/
-.limiter {
-  background:#fff;
-  }
 .title {
   color:#666;
   }
@@ -196,19 +191,14 @@ li {
   margin:10px 0;
   }
 .flatlist li {
-  float:left;
+  display:inline-block;
   margin:0 10px 5px 0;
-  -webkit-border-radius:8px;
-          border-radius:8px;
   }
 
-.footer {
+footer {
+  padding:40px 0;
   text-align:center;
   }
-  .footer .limiter {
-    background:#f0f0f0;
-    padding-top:40px;
-    }
 
 /*-----------------------------------
   Lil Helpers
@@ -240,35 +230,29 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
   Mobile
 -------------------------------------*/
 @media only screen and (max-width:640px) {
-    .section .limiter{
-      width:80%;
-      padding-left:10%;
-      padding-right:10%;
+    .limiter {
+      width:100%;
       }
     .col {
       width:100%;
       float:none;
       }
-    .section.heading {
-      padding:0;
+    section,
+    header {
+      margin:0;
+      padding:10px 20px;
       }
-    .heading h1 {
-      float:none;
-      display:block;
-      margin:20px 0;
-      }
-      .heading .limiter {
-        padding-top:40px;
+      header h1 {
+        margin-top:40px;
         }
-
     .twitter-follow-button {
       display:block;
       float:none;
       }
   }
 @media
-only screen and (-webkit-min-device-pixel-ratio : 2),
-only screen and (min-device-pixel-ratio : 2) {
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-device-pixel-ratio:2) {
     .section.experience ul li {
       background:transparent url(images/sprite@2x.png) no-repeat 0 0;
       background-size:20px 20px;
