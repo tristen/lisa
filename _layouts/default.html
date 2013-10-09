@@ -1,8 +1,16 @@
+---
+navigation:
+  - title: 'Blog'
+    category: blog
+    path: '/blog'
+  - title: 'Curriculum Vitae'
+    path: '/cv'
+---
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{{page.title}} | Lisa Toole</title>
   <meta charset='UTF-8'/>
+  <title>{% if page.url == '/' %}Lisa Toole{% else %}{{page.title}} | Lisa Toole{% endif %}</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <link rel='alternate' type='application/rss+xml' title='RSS' href='lisatoole.com/blog.rss' />
   <link rel='shortcut icon' href='{{site.baseurl}}/img/favicon.ico' type='image/x-icon' />
@@ -11,21 +19,22 @@
 </head>
 <body>
 
-<div class='limiter'>
-  <header>
-    <a href='https://twitter.com/toolelisae' class='twitter-follow-button' data-show-count='false'>Follow @toolelisae</a>
-    <h1>Lisa Toole</h1>
-    <!--<nav class='menu'>-->
-      <!--<a class='{% if page.section == "blog" %}active{% endif %}' href='{{site.baseurl}}/'>Blog</a>-->
-    <!--</nav>-->
+<div class='wrapper limiter'>
+  <header class='contain'>
+    <h1><a href='{{site.baseurl}}/'>Lisa Toole</a></h1>
+    <nav>
+      {% for item in page.navigation %}
+      <a class='{% if page.category == item.category or page.url == item.path %}active{% endif %}' href='{{item.path}}/'>{{item.title}}</a>
+      {% endfor %}
+    </nav>
   </header>
-
   {{content}}
-
-  <footer>
-    +1(202) 588 1068 | <span class='email reverse'>moc.liamg@e.asil.eloot</span>
-  </footer>
 </div>
+
+<footer class='limiter quiet'>
+  +1(202) 588 1068 | <span class='email reverse'>moc.liamg@e.asil.eloot</span>
+  <a href='https://twitter.com/toolelisae' class='twitter-follow-button' data-show-count='false'>Follow @toolelisae</a>
+</footer>
 
 <script>
   // Twitter Button

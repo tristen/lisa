@@ -79,16 +79,21 @@ h2, h3, h4, h5, h6 {
   }
 
 h1 {
-  font-size:48px;
+  font-size:40px;
   line-height:52px;
   font-weight:300;
   }
+  h1 a,
+  h1 a:hover {
+    color:#404040;
+    text-decoration:none;
+    }
 
 h2 {
   font-size:28px;
   line-height:34px;
   font-weight:300;
-  margin:10px 0 20px;
+  margin:0 0 20px;
   }
 
 h3 {
@@ -102,12 +107,9 @@ h4 {
   }
 
 a {
-  color:#CE5C00;
-  text-decoration:none;
+  color:#5B99DD;
   }
-  a:hover {
-    color:#f06b00;
-    }
+  a:hover { color:#4D87C5; }
 
 p {
   margin:0 0 10px;
@@ -119,14 +121,24 @@ em {
 li {
   margin:0 0 10px;
   }
+.big {
+  font-size:20px;
+  line-height:36px;
+  }
+
+img {
+  max-width:100%;
+  margin:0 auto;
+  }
 
 /*-----------------------------------
   Page Layout
 -------------------------------------*/
 .limiter {
-  width:880px;
+  max-width:880px;
   margin:0 auto;
   }
+
 .col0    { float:left; width:04.1666%; }
 .col1    { float:left; width:08.3333%; }
 .col2    { float:left; width:16.6666%; }
@@ -158,13 +170,13 @@ li {
 /*-----------------------------------
   Page Styling
 -------------------------------------*/
+.wrapper {
+  -webkit-box-shadow:0 0 1px rgba(0,0,0,0.25);
+          box-shadow:0 0 1px rgba(0,0,0,0.25);
+  }
 section {
   background:#fff;
-  border-bottom:1px solid #e6e6e6;
-  padding:20px 60px;
-  }
-.item {
-  padding:15px 0;
+  padding:20px 40px;
   }
 .indent {
   margin-left:40px;
@@ -174,28 +186,37 @@ section {
   font-weight:normal;
   }
 
-.col {
-  float:left;
-  display:block;
-  }
-  .col-aside {
-    width:140px;
-    }
-  .col-main {
-    width:540px;
-    }
-
 .pull-left {
   display:block;
-  margin-left:180px;  
+  margin-left:180px;
   }
 
 header {
   background:#fff;
-  border-top:8px solid #F06B00;
-  padding:60px 60px 20px;
-  margin-top:60px;
+  border-top:2px solid #ee6565;
+  padding:60px 40px 40px;
+  margin-top:40px;
   }
+  header nav {
+    position:absolute;
+    top:0;
+    right:40px;
+    }
+    header nav a {
+      display:inline-block;
+      padding:10px;
+      margin-left:1px;
+      color:#ee6565;
+      text-decoration:none;
+      border-top:8px solid #fff;
+      font-size:17px;
+      }
+      header nav a.active,
+      header nav a:hover {
+        border-color:#ee6565;
+        color:#ee6565;
+        }
+
 .twitter-follow-button {
   float:right;
   }
@@ -205,10 +226,10 @@ section.experience ul li {
   padding:0 0 8px 25px;
   margin:0;
   }
-  
+
 /* Last item rule */
 section.publications {
-  padding-bottom:60px;
+  padding-bottom:40px;
   }
 
 /*-----------------------------------
@@ -217,34 +238,26 @@ section.publications {
 .title {
   color:#666;
   }
-.date {
-  color:#b0b0b0;
-  }
-.note {
-  color:#b0b0b0;
-  font-style:italic;
-  }
-.twitter-follow-button {
-  display:block;
-  margin:10px 0;
-  }
 .flatlist li {
   display:inline-block;
   margin:0 10px 5px 0;
   }
-
-footer {
-  padding:40px 0;
-  text-align:center;
+.item {
+  margin:0 0 20px;
   }
+footer {
+  padding:20px 0 40px;
+  font-size:13px;
+  font-weight:bold;
+  }
+  footer a { margin-left:5px; }
 
 /* Additional Utility Classes
 ------------------------------------------------------- */
 .fr               { float:right; }
 .fl               { float:left; }
 .dot              { border-radius:50%; }
-.quiet            { color:#7f7f7f; color: rgba(0,0,0,.5); }
-.dark .quiet      { color: #7f7f7f; color: rgba(255,255,255,.5);}
+.quiet            { color:#b0b0b0; }
 .center           { text-align:center; }
 .contain          { position:relative; }
 .clip             { overflow:hidden; }
@@ -257,7 +270,13 @@ footer {
 
 img.inline,
 .inline           { display:inline-block; }
-.block           { display:block; }
+.block            { display:block; }
+
+.keyline          { border:1px solid #f0f0f0; }
+.keyline-top      { border-top:1px solid #f0f0f0; }
+.keyline-left     { border-left:1px solid #f0f0f0; }
+.keyline-right    { border-right:1px solid #f0f0f0; }
+.keyline-bottom   { border-bottom:1px solid #f0f0f0; }
 
 /* Email Spam Trick */
 .reverse {
@@ -310,13 +329,6 @@ img.inline,
   .pad2y        { padding-top:10px; padding-bottom:10px; }
   .pad2x        { padding-right:10px; padding-left:10px; }
 
-  .limiter {
-    width:100%;
-    }
-  .col {
-    width:100%;
-    float:none;
-    }
   section,
   header {
     margin:0;
