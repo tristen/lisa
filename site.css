@@ -46,15 +46,6 @@ table { border-collapse: collapse; border-spacing:0; }
   clear:both;
   visibility:hidden;
   }
-*::-webkit-scrollbar {
-  background:#fff;
-  width:15px;
-  }
-*::-webkit-scrollbar-thumb {
-  background:#ccc;
-  border-radius:15px;
-  border:5px #fff solid;
-  }
 *, *:after, *:before {
   -webkit-box-sizing:border-box;
      -moz-box-sizing:border-box;
@@ -95,17 +86,25 @@ h2 {
   font-weight:300;
   margin:0 0 20px;
   }
-
-h3 {
+h3,
+.big {
+  font-size:20px;
+  line-height:36px;
+  font-weight:300;
+  margin:0 0 10px;
+  }
+h4 {
   font-size:15px;
   line-height:1.333em;
   }
-
-h4 {
+h5 {
   font-size:12px;
   line-height:1.666em;
   }
 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration:none;
+  }
 a {
   color:#5B99DD;
   }
@@ -121,9 +120,9 @@ em {
 li {
   margin:0 0 10px;
   }
-.big {
-  font-size:20px;
-  line-height:36px;
+.small {
+  font-size:13px;
+  font-weight:normal;
   }
 
 img {
@@ -167,23 +166,29 @@ img {
 .margin11 { margin-left:91.6666%; }
 .margin12 { margin-left:100.0000%; }
 
+.pad1    { padding:10px; }
+.pad2    { padding:20px; }
+.pad4    { padding:40px; }
+
+.pad1x { padding-left: 10px; padding-right: 10px;}
+.pad2x { padding-left: 20px; padding-right: 20px;}
+.pad4x { padding-left: 40px; padding-right: 40px;}
+
+.pad1y { padding-top: 10px; padding-bottom: 10px;}
+.pad2y { padding-top: 20px; padding-bottom: 20px;}
+.pad4y { padding-top: 40px; padding-bottom: 40px;}
+
 /*-----------------------------------
   Page Styling
 -------------------------------------*/
 .wrapper {
+  background:#fff;
+  min-height:550px;
   -webkit-box-shadow:0 0 1px rgba(0,0,0,0.25);
           box-shadow:0 0 1px rgba(0,0,0,0.25);
   }
-section {
-  background:#fff;
-  padding:20px 40px;
-  }
 .indent {
   margin-left:40px;
-  }
-.small {
-  font-size:13px;
-  font-weight:normal;
   }
 
 .pull-left {
@@ -192,33 +197,27 @@ section {
   }
 
 header {
-  background:#fff;
   border-top:2px solid #ee6565;
   padding:60px 40px 40px;
   margin-top:40px;
   }
-  header nav {
-    position:absolute;
-    top:0;
-    right:40px;
+  header nav a {
+    display:inline-block;
+    padding:10px 10px 10px 0;
+    color:#d0d0d0;
+    text-decoration:none;
+    font-size:17px;
+    margin-top:10px;
     }
-    header nav a {
-      display:inline-block;
-      padding:10px;
-      margin-left:1px;
-      color:#ee6565;
-      text-decoration:none;
-      border-top:8px solid #fff;
-      font-size:17px;
+    header nav a.active,
+    header nav a:hover {
+      color:#EE6565;
       }
-      header nav a.active,
-      header nav a:hover {
-        border-color:#ee6565;
-        color:#ee6565;
-        }
 
 .twitter-follow-button {
-  float:right;
+  position:relative;
+  top:5px;
+  left:10px;
   }
 
 section.experience ul li {
@@ -246,11 +245,8 @@ section.publications {
   margin:0 0 20px;
   }
 footer {
-  padding:20px 0 40px;
-  font-size:13px;
-  font-weight:bold;
+  color:#666;
   }
-  footer a { margin-left:5px; }
 
 /* Additional Utility Classes
 ------------------------------------------------------- */
@@ -328,20 +324,10 @@ img.inline,
   .pad2         { padding:10px; }
   .pad2y        { padding-top:10px; padding-bottom:10px; }
   .pad2x        { padding-right:10px; padding-left:10px; }
-
-  section,
-  header {
-    margin:0;
-    padding:10px 20px;
-    }
-    header h1 {
-      margin-top:40px;
-      }
-  .twitter-follow-button {
-    display:block;
-    float:none;
-    }
+  .fl, .fr      { float:none; }
+  header        { margin:0; padding:60px 20px 40px; }
 }
+
 @media
 only screen and (-webkit-min-device-pixel-ratio:2),
 only screen and (min-device-pixel-ratio:2) {

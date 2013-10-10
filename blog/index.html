@@ -1,4 +1,14 @@
 ---
 layout: default
 category: blog
+title: Blog
 ---
+
+<section class='keyline-top'>
+{% for item in site.categories.blog %}
+<div class='center pad2y pad4x'>
+  <small class='quiet'>{{item.date | date: '%B %d, %Y'}}</small>
+  <h3><a href='{{item.url}}'>{{item.title}}</a></h3></h3>
+</div>
+{% endfor %}
+</section>

@@ -2,7 +2,7 @@
 category: blog
 layout: blog
 title: 'Women and Food Insecurity: Why Gender Matters'
-splash: "http://placehold.it/1600x500"
+splash: '/img/splash/women-food-security.png'
 ---
 
 Food security is the secure access to sufficient food (both in quality and in

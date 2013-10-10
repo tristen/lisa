@@ -4,6 +4,7 @@ navigation:
     category: blog
     path: '/blog'
   - title: 'Curriculum Vitae'
+    category: cv
     path: '/cv'
 ---
 <!DOCTYPE html>
@@ -21,19 +22,18 @@ navigation:
 
 <div class='wrapper limiter'>
   <header class='contain'>
-    <h1><a href='{{site.baseurl}}/'>Lisa Toole</a></h1>
-    <nav>
+    <nav class='fr'>
       {% for item in page.navigation %}
       <a class='{% if page.category == item.category or page.url == item.path %}active{% endif %}' href='{{item.path}}/'>{{item.title}}</a>
       {% endfor %}
     </nav>
+    <h1><a href='{{site.baseurl}}/'>Lisa Toole</a></h1>
   </header>
   {{content}}
 </div>
 
-<footer class='limiter quiet'>
-  +1(202) 588 1068 | <span class='email reverse'>moc.liamg@e.asil.eloot</span>
-  <a href='https://twitter.com/toolelisae' class='twitter-follow-button' data-show-count='false'>Follow @toolelisae</a>
+<footer class='limiter pad2y pad4x center'>
+  +1(202) 588 1068 | <span class='email reverse'>moc.liamg@e.asil.eloot</span><a href='https://twitter.com/toolelisae' class='twitter-follow-button' data-show-count='false'>Follow @toolelisae</a>
 </footer>
 
 <script>
