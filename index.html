@@ -8,5 +8,11 @@ layout: default
   </div>
   <div class='col8 margin1'>
     <p class='big title'>Lisa Toole is a writer and research/policy analyst who focuses on poverty and food insecurity globally and domestically. She completed a MA in Health Policy &amp; Equity from York University in Toronto Ontario and has training in human rights, international development, and health disparities. She has worked in research positions at NGOs such as Raising the Roof and large research hospitals such as the Centre for Addiction and Mental Health.</p>
+    <div class='keyline-top pad2y'>
+      <h6>Latest post</h6>
+      {% for item in site.categories.blog %}
+      <h3><a href='{{item.url}}'>{{item.title}}</a>
+      {% endfor %}
+    </div>
   </div>
 </section>
